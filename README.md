@@ -7,7 +7,7 @@
 [Meu quadro de tarefas](https://github.com/lucasspeixoto/my-task-board.git) é o projeto de desenvolvido em uma playlist do canal [Descomplicando a prática](https://www.youtube.com/channel/UC6LY6Xw5ff_KaHwjHWRA9oA?sub_confirmation=1) no youtube onde vamos construir um toDo app completo com
 intregração a backend usando as novas features que surgiram nas versões 16, 17 e 18 do angular.
 
-Se você está começando com o framework ou ainda precisa aprender o que chegou no de novo no angular, se [inscreva](https://www.youtube.com/channel/UC6LY6Xw5ff_KaHwjHWRA9oA?sub_confirmation=1) e desenvolva esse projeto comigo.
+Se você está começando com o framework ou ainda precisa aprender o que chegou de novo no angular, se [inscreva](https://www.youtube.com/channel/UC6LY6Xw5ff_KaHwjHWRA9oA?sub_confirmation=1) e desenvolva esse projeto comigo.
 
 ## ✨ Tecnologias
 
