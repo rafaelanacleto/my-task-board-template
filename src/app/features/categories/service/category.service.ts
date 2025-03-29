@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { Categoria } from '../model/category.model';
 import { environment } from '../../../../environments/environment';
 
@@ -16,6 +16,8 @@ export class CategoryService {
   public categorias = signal<Categoria[]>([]);
 
   public getCategories(): Observable<Categoria[]> {
-    return this.httpClient.get<Categoria[]>(this.apiUrl);
+    return this.httpClient
+      .get<Categoria[]>(this.apiUrl)
+      .pipe(tap(categorias => this.categorias.set(categorias)));
   }
 }
