@@ -16,9 +16,7 @@ import { ColorsListComponent } from '../../components/colors-list/colors-list/co
     <div class="flex flex-col items-center justify-center h-screen">
       <!-- main list -->
       <app-main-list></app-main-list>
-
       <mat-divider></mat-divider>
-
       <!-- div botoes -->
       <app-colors-list></app-colors-list>
     </div>
