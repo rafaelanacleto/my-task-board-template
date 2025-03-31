@@ -13,7 +13,7 @@ import { ColorsListComponent } from '../../components/colors-list/colors-list/co
     ColorsListComponent,
   ],
   template: `
-    <div class="flex flex-col items-center justify-center h-screen">
+    <div class="flex flex-col items-center justify-between h-screen">
       <!-- main list -->
       <app-main-list></app-main-list>
       <mat-divider></mat-divider>
