@@ -1,12 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ThemeToggleComponent } from './shared/components/theme-toggle/theme-toggle.component';
 import { ThemeService } from './shared/services/theme.service';
-import { MainComponent } from "./layout/main/main.component";
+import { MainComponent } from './layout/main/main.component';
 
-const COMPONENTS = [
-  ThemeToggleComponent,
-  MainComponent,
-];
+const COMPONENTS = [ThemeToggleComponent, MainComponent];
 
 @Component({
   selector: 'app-root',
