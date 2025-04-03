@@ -25,6 +25,26 @@
       "id": "5",
       "name": "Saúde",
       "color": "purple"
+    },
+    {
+      "id": "6",
+      "name": "Lazer",
+      "color": "pink"
+    },
+    {
+      "id": "7",
+      "name": "Viagem",
+      "color": "yellow"
+    },
+    {
+      "id": "8",
+      "name": "Compras",
+      "color": "brown"
+    },
+    {
+      "id": "9",
+      "name": "Outros",
+      "color": "#000000"
     }
   ]
 }

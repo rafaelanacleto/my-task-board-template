@@ -5,12 +5,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-        <div>
-          <h1>Meu quadro de Tarefas</h1>          
-        </div>
-  
+    <div>
+      <h1>Meu quadro de Tarefas</h1>
+    </div>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TaskComponent { }
+export class TaskComponent {}
