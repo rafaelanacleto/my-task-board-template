@@ -3,25 +3,24 @@ import { MatDividerModule } from '@angular/material/divider';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { CategoryService } from '../../../service/category.service';
 import { MatButtonModule } from '@angular/material/button';
+import { categoryBackgroundColors } from '../../../constants/category-colors';
 
 @Component({
   selector: 'app-colors-list',
   standalone: true,
   imports: [MatDividerModule, CommonModule, AsyncPipe, MatButtonModule],
   template: `
-    <section class="flex flex-col gap-4 w-full">
+    <section class="flex flex-col gap-4 w-full h-auto mb-8">
       <mat-divider class="opacity-50 w-full"></mat-divider>
       <div class="flex flex-wrap pl-1">
-        <div
-          class="flex flex-wrap items-center h-full
-          gap-4">
-          @for (categories of categorias$(); track categories.id) {
-            <button
-              [style.backgroundColor]="categories.color"
-              mat-flat-button
-              type="button">
+        <div class="flex flex-wrap gap-4">
+          @for (categories of categorias(); track categories.id) {
+            <span
+              class="text-white {{
+                categoryBackGroundColor[categories.color || 'default']
+              }} px-4 py-2 mt-4 rounded-md text-sm font-semibold cursor-pointer hover:opacity-80 transition-opacity duration-200 ease-in-out">
               {{ categories.name }}
-            </button>
+            </span>
           }
         </div>
       </div>
@@ -32,5 +31,6 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ColorsListComponent {
   private readonly categoryService = inject(CategoryService);
-  public categorias$ = this.categoryService.categorias;
+  public categorias = this.categoryService.categorias;
+  public categoryBackGroundColor = categoryBackgroundColors!;
 }
