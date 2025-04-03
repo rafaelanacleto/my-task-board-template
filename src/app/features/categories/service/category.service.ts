@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { Categoria } from '../model/category.model';
 import { environment } from '../../../../environments/environment';
 
@@ -10,14 +10,10 @@ import { environment } from '../../../../environments/environment';
 export class CategoryService {
   private apiUrl = environment.apiUrl + '/categories';
   private readonly httpClient = inject(HttpClient);
-  // private apiUrl = 'http://localhost:3000/categories';
-  // private apiUrl = 'https://api.example.com/categories';
 
-  public categorias = signal<Categoria[]>([]);
-
-  public getCategories(): Observable<Categoria[]> {
-    return this.httpClient
-      .get<Categoria[]>(this.apiUrl)
-      .pipe(tap(categorias => this.categorias.set(categorias)));
-  }
+  private categories$ = this.httpClient.get<Categoria[]>(this.apiUrl);
+  // Signal to store the categories
+  // Using signal to store the categories
+  // This will be used to update the categories in the component
+  public categories = toSignal(this.categories$);
 }
