@@ -29,7 +29,7 @@
     {
       "id": "6",
       "name": "Lazer",
-      "color": "pink"
+      "color": "teal"
     },
     {
       "id": "7",
@@ -39,12 +39,12 @@
     {
       "id": "8",
       "name": "Compras",
-      "color": "brown"
+      "color": "lime"
     },
     {
       "id": "9",
       "name": "Outros",
-      "color": "#000000"
+      "color": "fuchsia"
     }
   ]
 }

@@ -30,7 +30,7 @@ import { CategoryService } from '../../../service/category.service';
 })
 export class MainListComponent {
   private readonly categoryService = inject(CategoryService);
-  public categorias$ = this.categoryService.categorias;
+  public categorias$ = this.categoryService.categories;
 
   constructor() {}
 }

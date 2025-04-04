@@ -17,15 +17,11 @@ import { CategoryService } from '../../service/category.service';
   template: `
     <div
       class="flex flex-col justify-between items-center  h-full w-full gap-4">
-      @if (categorias$ | async) {
-        <!-- main list -->
-        <app-main-list></app-main-list>
-        <mat-divider></mat-divider>
-        <!-- div botoes -->
-        <app-colors-list></app-colors-list>
-      } @else {
-        <h2>Goodbye</h2>
-      }
+      <!-- main list -->
+      <app-main-list></app-main-list>
+      <mat-divider></mat-divider>
+      <!-- div botoes -->
+      <app-colors-list></app-colors-list>
     </div>
   `,
   styles: ``,
@@ -34,5 +30,5 @@ import { CategoryService } from '../../service/category.service';
 })
 export class CategoryComponent {
   private readonly categoryService = inject(CategoryService);
-  public categorias$ = this.categoryService.getCategories();
+  public categorias$ = this.categoryService.categories;
 }

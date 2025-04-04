@@ -31,6 +31,6 @@ import { categoryBackgroundColors } from '../../../constants/category-colors';
 })
 export class ColorsListComponent {
   private readonly categoryService = inject(CategoryService);
-  public categorias = this.categoryService.categorias;
+  public categorias = this.categoryService.categories;
   public categoryBackGroundColor = categoryBackgroundColors!;
 }
