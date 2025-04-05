@@ -1,5 +1,21 @@
 {
-  "tasks": [],
+  "tasks": [{
+    "id": "1",
+    "title": "Limpar a cozinha",
+    "description": "Lavar a louça e organizar a bancada.",
+    "category": "1",
+    "dueDate": "2023-11-15",
+    "completed": false
+  },
+  {
+    "id": "2",
+    "title": "Estudar para a prova de matemática",
+    "description": "Revisar os capítulos 3 e 4.",
+    "category": "2",
+    "dueDate": "2023-11-18",
+    "completed": false
+  }
+],
   "categories": [
     {
       "id": "1",
